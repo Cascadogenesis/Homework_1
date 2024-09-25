@@ -1,0 +1,28 @@
+package work1;
+//(4) Реализуйте метод compareNumbers(),
+// в теле которого объявите две int переменные a и b с любыми начальными значениями.
+// Если a больше или равно b, 
+// то необходимо вывести в консоль сообщение “a >= b”, 
+// в противном случае “a < b”;
+import java.util.Scanner;
+
+public class work4 {
+    public static void main(String[] args) {
+        compareNumbers();
+    }
+
+    public static void compareNumbers() {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Введите а = ");
+        int a = scanner.nextInt();
+        System.out.print("Введите b = ");
+        int b = scanner.nextInt();
+
+        if (a >= b) {
+            System.out.println("a >= b");
+        } else {
+            System.out.println("a < b");
+        }
+        scanner.close();
+    }
+}
