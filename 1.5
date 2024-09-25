@@ -1,0 +1,35 @@
+package work1;
+//Создайте метод addOrSubtractAndPrint(int initValue, int delta, boolean increment).
+// Если increment = true, то метод должен к initValue прибавить delta
+// и отпечатать в консоль результат,
+// в противном случае - вычесть;
+import java.util.Scanner;
+
+public class work5 {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Введите  первое значение: ");
+        int initValue = scanner.nextInt();
+
+        System.out.print("Введите второе значение: ");
+        int delta = scanner.nextInt();
+
+        System.out.print("Введите true для прибавления или false для вычитания: ");
+        boolean increment = scanner.nextBoolean();
+
+        addOrSubtractAndPrint(initValue, delta, increment);
+
+        scanner.close();
+    }
+
+    public static void addOrSubtractAndPrint(int initValue, int delta, boolean increment) {
+        if (increment) {
+            int result = initValue + delta;
+            System.out.println("Результат (прибавление): " + result);
+        } else {
+            int result = initValue - delta;
+            System.out.println("Результат (вычитание): " + result);
+        }
+    }
+}
