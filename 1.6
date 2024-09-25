@@ -1,0 +1,94 @@
+package work1;
+//Каждый метод последовательно вызовите из метода main()
+import java.util.Scanner;
+
+public class workmain {
+    public static void main(String[] args) {
+        System.out.println("Задание 1");
+        greetings();
+
+        System.out.println("Задание 2");
+        checkSign(2, -6, -6);
+
+        System.out.println("Задание 3");
+        compareNumbers();
+
+        System.out.println("Задание 4");
+        selectColor();
+
+        System.out.println("Задание 5");
+        addOrSubtractAndPrint();
+    }
+
+    public static void greetings() {
+        System.out.println("Hello");
+        System.out.println("World");
+        System.out.println("from");
+        System.out.println("Java");
+    }
+
+    public static void checkSign(int a, int b, int c) {
+        int sum = a + b + c;
+        System.out.println("Сумма равна = " + sum);
+        if (sum >= 0) {
+            System.out.println("Она положительная");
+        } else {
+            System.out.println("Она отрицательная");
+        }
+    }
+
+    public static void compareNumbers() {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Введите a = ");
+        int a = scanner.nextInt();
+        System.out.print("Введите b = ");
+        int b = scanner.nextInt();
+
+        if (a >= b) {
+            System.out.println("a >= b");
+        } else {
+            System.out.println("a < b");
+        }
+    }
+
+    public static void selectColor() {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Введите значение переменной data: ");
+        int data = scanner.nextInt();
+
+        if (data <= 10) {
+            System.out.println("Красный");
+        } else if (data <= 20) {
+            System.out.println("Желтый");
+        } else {
+            System.out.println("Зеленый");
+        }
+    }
+
+    public static void addOrSubtractAndPrint() {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Введите  первое значение: ");
+        int initValue = scanner.nextInt();
+
+        System.out.print("Введите второе значение: ");
+        int delta = scanner.nextInt();
+
+        System.out.print("Введите true для прибавления или false для вычитания: ");
+        boolean increment = scanner.nextBoolean();
+
+        addOrSubtractAndPrint(initValue, delta, increment);
+
+        scanner.close();
+    }
+
+    public static void addOrSubtractAndPrint(int initValue, int delta, boolean increment) {
+        if (increment) {
+            int result = initValue + delta;
+            System.out.println("Результат (прибавление): " + result);
+        } else {
+            int result = initValue - delta;
+            System.out.println("Результат (вычитание): " + result);
+        }
+    }
+}
