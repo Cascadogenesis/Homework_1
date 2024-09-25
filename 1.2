@@ -1,0 +1,22 @@
+package work1;
+//(2) Реализуйте метод checkSign(..), 
+// принимающий в качестве аргументов 3 int переменные a, b и c. 
+// Метод должен посчитать их сумму, и если она больше или равна 0, 
+// то вывести в консоль сообщение “Сумма положительная”,
+// в противном случае - “Сумма отрицательная”;
+public class work2 {
+    public static void main(String[] args) {
+
+        checkSign(2,-6,-6);
+    }
+
+    public static void checkSign(int a, int b, int c) {
+        int sum = a + b + c; // Считаем сумму
+        System.out.println("Сумма равна = "+sum);
+        if (sum >= 0) {
+            System.out.println("Она положительная");
+        } else {
+            System.out.println("Она отрицательная");
+        }
+    }
+}
